@@ -6,17 +6,12 @@ import {
 import _ from 'lodash';
 import {UserProfile, securityId} from '@loopback/security';
 
-interface MyAuthorizationMetadata extends AuthorizationMetadata {
-  currentUser?: UserProfile;
-  decision?: AuthorizationDecision;
-}
-
 // Instance level authorizer
 // Can be also registered as an authorizer, depends on users' need.
 export async function compareId(
   authorizationCtx: AuthorizationContext,
-  metadata: MyAuthorizationMetadata,
-) {
+  metadata: AuthorizationMetadata,
+): Promise<AuthorizationDecision> {
   let currentUser: UserProfile;
   if (authorizationCtx.principals.length > 0) {
     const user = _.pick(authorizationCtx.principals[0], [

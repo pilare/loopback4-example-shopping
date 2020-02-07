@@ -22,6 +22,7 @@ import {authorize} from '@loopback/authorization';
 import {Product} from '../models';
 import {ProductRepository} from '../repositories';
 import {basicAuthorization} from '../services/basic.authorizor';
+import {OPERATION_SECURITY_SPEC} from '../utils/security-spec';
 
 export class ProductController {
   constructor(
@@ -30,6 +31,7 @@ export class ProductController {
   ) {}
 
   @post('/products', {
+    security: OPERATION_SECURITY_SPEC,
     responses: {
       '200': {
         description: 'Product model instance',
@@ -93,6 +95,7 @@ export class ProductController {
   }
 
   @patch('/products', {
+    security: OPERATION_SECURITY_SPEC,
     responses: {
       '200': {
         description: 'Product PATCH success count',
@@ -138,6 +141,7 @@ export class ProductController {
   }
 
   @patch('/products/{id}', {
+    security: OPERATION_SECURITY_SPEC,
     responses: {
       '204': {
         description: 'Product PATCH success',
@@ -161,6 +165,7 @@ export class ProductController {
   }
 
   @put('/products/{id}', {
+    security: OPERATION_SECURITY_SPEC,
     responses: {
       '204': {
         description: 'Product PUT success',
@@ -177,6 +182,7 @@ export class ProductController {
   }
 
   @del('/products/{id}', {
+    security: OPERATION_SECURITY_SPEC,
     responses: {
       '204': {
         description: 'Product DELETE success',
