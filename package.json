@@ -52,27 +52,27 @@
     "@commitlint/config-conventional": "8.3.4",
     "@commitlint/config-lerna-scopes": "8.3.4",
     "@commitlint/travis-cli": "8.3.5",
-    "@loopback/build": "3.1.1",
-    "@loopback/eslint-config": "5.0.3",
-    "@loopback/testlab": "1.10.3",
-    "@types/fs-extra": "8.0.1",
-    "@types/node": "12.12.26",
-    "@typescript-eslint/eslint-plugin": "2.19.0",
-    "@typescript-eslint/parser": "2.19.0",
+    "@loopback/build": "5.0.0",
+    "@loopback/eslint-config": "6.0.2",
+    "@loopback/testlab": "2.0.2",
+    "@types/fs-extra": "8.1.0",
+    "@types/node": "12.12.32",
+    "@typescript-eslint/eslint-plugin": "2.26.0",
+    "@typescript-eslint/parser": "2.26.0",
     "commitizen": "4.0.3",
     "concurrently": "5.1.0",
     "cz-conventional-changelog": "3.1.0",
     "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.0",
+    "eslint-config-prettier": "6.10.1",
     "eslint-plugin-eslint-plugin": "2.2.1",
-    "eslint-plugin-mocha": "6.2.2",
-    "fs-extra": "8.1.0",
-    "husky": "4.2.1",
+    "eslint-plugin-mocha": "6.3.0",
+    "fs-extra": "9.0.0",
+    "husky": "4.2.3",
     "lerna": "3.20.2",
-    "mocha": "7.0.1",
+    "mocha": "7.1.1",
     "source-map-support": "0.5.16",
-    "testcontainers": "2.3.1",
-    "typescript": "3.7.5"
+    "testcontainers": "2.6.0",
+    "typescript": "3.8.3"
   },
   "copyright.owner": "IBM Corp.",
   "config": {
@@ -83,26 +83,6 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "greenkeeper": {
-    "commitMessages": {
-      "initialBadge": "docs: add Greenkeeper badge",
-      "initialDependencies": "chore: update dependencies",
-      "initialBranches": "chore: whitelist greenkeeper branches",
-      "dependencyUpdate": "chore: update ${dependency} to version ${version}",
-      "devDependencyUpdate": "chore: update ${dependency} to version ${version}",
-      "dependencyPin": "chore: pin ${dependency} to ${oldVersion}",
-      "devDependencyPin": "chore: pin ${dependency} to ${oldVersion}",
-      "lockfileUpdate": "chore: update lockfile ${lockfilePath}"
-    },
-    "prTitles": {
-      "initialPR": "[greenkeeper] update dependencies to enable Greenkeeper",
-      "initialPrBadge": "[greenkeeper] add badge to enable Greenkeeper",
-      "initialPrBadgeOnly": "[greenkeeper] add Greenkeeper badge",
-      "initialSubgroupPR": "[greenkeeper] update dependencies for ${group}",
-      "basicPR": "[greenkeeper] update ${dependency} to the latest",
-      "groupPR": "[greenkeeper] update ${dependency} in group ${group} to the latest"
     }
   }
 }
